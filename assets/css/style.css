@@ -17,7 +17,6 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: var(--primary);
   background-color: var(--light);
-  line-height: 1.5;
 }
 
 header {
@@ -75,26 +74,35 @@ main {
 .hero-banner {
   background-image: url("../images/TurksBeach.JPEG"), linear-gradient(180deg, var(--secondary) 0%, var(--primary) 100%);
   background-size: cover;
-  background-position: center;
-  min-height: 30vh;
-  padding: 2% 6%;
   display: flex;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   align-items: flex-end;
+}
+
+.profile-img {
+  background-image: url("../images/BioPicture.JPG");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 50%;
+  min-height: 400px;
+  padding: 20px;
+  display: flex;
+  align-content: center;
+  position: relative;
+
+}
+
+.hero-cta {
+  width: 35%;
   text-align: right;
-}
-
-.hero-banner div {
-  flex: 0 0 90%;
-}
-
-.hero-banner h2 {
-  color: white;
-  margin: 0;
-  padding: 5px 10px;
-  font-size: 2.3rem;
+  margin: 3.5%;
+  color: #fff;
+  font-size: 18px;
   line-height: 1.2;
-  display: inline;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
 }
 
 .page-wrapper {
@@ -215,11 +223,11 @@ main {
 }
 
 .react-calc {
-  background-image: url("../images/02-portfolio-2.jpg");
+  background-image: url("../images/coming-soon.jpg");
 }
 
 .pastel-puzzles {
-  background-image: url("../images/02-portfolio-3.jpg");
+  background-image: url("../images/coming-soon.jpg");
 }
 
 .premier-portable {
@@ -245,6 +253,14 @@ main {
 
   header nav {
     justify-content: center;
+  }
+
+  .hero-banner {
+    min-height: 10vh;
+  }
+
+  .profile-img {
+    min-height: none;
   }
 
   .page-section > h2,
@@ -274,8 +290,8 @@ main {
 
   .hero-banner {
     justify-content: center;
-    text-align: center;
   }
+
 
   .contact address {
     flex-direction: column;
